@@ -1,74 +1,73 @@
+/* Cores originais do seu HTML/CSS anterior, ajustadas para o fundo escuro */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
-    color: #f0f0f0;
+    background-color: #f2f2f2; /* Mantendo o fundo claro original */
+    color: #333; /* Texto escuro padrão */
     line-height: 1.6;
 }
 
 .logo {
-    background-color: #333;
+    background-color: #333; /* Cor original */
     padding: 20px 0;
     text-align: center;
-    border-bottom: 3px solid #6a0505;
+    border-bottom: 3px solid #ccc; /* Ajuste para contraste, ou mantenha a cor que você tinha */
 }
 
 .logo h1 {
     margin: 0;
-    color: #e0e0e0;
-    font-size: 2.8em;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Cor original */
+    font-size: 2.5em;
+    letter-spacing: 2px;
 }
 
 nav {
-    background-color: #222;
+    background-color: #555; /* Cor original */
     text-align: center;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
-    color: #e0e0e0;
+    color: #fff; /* Cor original */
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 10px 15px;
+    margin: 0 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #6a0505;
-    color: #ffffff;
+    background-color: #777; /* Cor original */
 }
 
+/* --- ESTILO DA SEÇÃO DE CONTATO AJUSTADO --- */
 .contact-page {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinha o conteúdo ao topo */
-    min-height: calc(100vh - 180px); /* Ajusta altura para o footer */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    min-height: calc(100vh - 180px); /* Garante altura mínima para o footer */
     padding: 40px 20px;
     box-sizing: border-box;
+    background-color: #f2f2f2; /* Fundo principal da página, mantendo-o claro */
 }
 
 .contact-info-container {
-    background-color: #2a2a2a;
+    background-color: #ffffff; /* Fundo branco para a caixa de contato */
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 600px;
     width: 100%;
     text-align: center;
 }
 
 .contact-info-container h2 {
-    color: #e0e0e0;
-    font-size: 2.5em;
+    color: #333; /* Título em preto */
+    font-size: 2.2em;
     margin-bottom: 25px;
-    border-bottom: 2px solid #6a0505;
+    border-bottom: 2px solid #ddd; /* Linha sutil abaixo do título */
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -76,44 +75,44 @@ nav a:hover {
 .intro-text {
     font-size: 1.1em;
     margin-bottom: 30px;
-    color: #ccc;
+    color: #666; /* Texto de introdução em cinza mais suave */
 }
 
 .contact-item {
-    background-color: #3a3a3a;
+    background-color: #f9f9f9; /* Fundo muito claro para cada item de contato */
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #6a0505;
+    border-radius: 6px;
+    border-left: 5px solid #007bff; /* Uma cor de destaque, como azul, ou outra que você prefira */
     text-align: left;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra leve nos itens */
 }
 
 .contact-item h3 {
-    color: #e0e0e0;
-    font-size: 1.6em;
+    color: #0056b3; /* Cor do título do item (pode ser o mesmo azul de destaque) */
+    font-size: 1.5em;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .contact-item p {
-    color: #f0f0f0;
-    font-size: 1.1em;
+    color: #333; /* Cor do texto do item */
+    font-size: 1.05em;
     margin: 0;
 }
 
 .discord-button {
     display: inline-block;
-    background-color: #7289da; /* Cor do Discord */
+    background-color: #7289da; /* Cor original do Discord */
     color: #ffffff;
     padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    margin-top: 15px;
+    margin-top: 20px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .discord-button:hover {
@@ -122,12 +121,12 @@ nav a:hover {
 }
 
 footer {
-    background-color: #333;
-    color: #ccc;
+    background-color: #333; /* Cor original */
+    color: #fff; /* Cor original */
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
-    border-top: 3px solid #6a0505;
+    border-top: 3px solid #ccc; /* Ajuste para contraste */
 }
 
 /* Responsividade Básica */
