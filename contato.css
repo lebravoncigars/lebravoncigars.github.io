@@ -70,7 +70,7 @@ nav a:hover {
 /* === Main Content === */
 main {
     padding: 40px 0;
-    max-width: 800px; /* Mantém o max-width para o conteúdo principal */
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
@@ -134,53 +134,60 @@ main p {
 
 /* --- Reestilização e layout dos itens de contato (agora como blocos) --- */
 .contact-items-grid {
-    display: grid; /* Usa Grid para o layout */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2 colunas em telas maiores, 1 em menores, com mínimo de 280px */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px; /* Espaçamento entre os blocos */
-    justify-content: center; /* Centraliza a grid */
-    align-items: stretch; /* Faz os itens terem a mesma altura */
-    margin-top: 30px; /* Espaço do título para os blocos */
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 30px;
 }
 
 .contact-item {
     background: linear-gradient(to right, #f5d49c, #e0b973); /* Gradiente de ouro */
-    padding: 25px 30px; /* Padding interno maior */
-    border-radius: 12px; /* Bordas mais arredondadas para os blocos */
+    padding: 25px 30px;
+    border-radius: 12px;
     border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra mais destacada */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     display: flex;
-    flex-direction: column; /* Conteúdo em coluna (título e info) */
-    justify-content: space-between; /* Espaço entre o título e a informação */
-    align-items: center; /* Centraliza o conteúdo horizontalmente dentro do bloco */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    cursor: copy; /* Indica que o conteúdo será copiado */
-    text-align: center; /* Centraliza o texto */
-    min-height: 150px; /* Altura mínima para os blocos */
-    position: relative; /* Para o tooltip */
+    cursor: copy;
+    text-align: center;
+    min-height: 150px;
+    position: relative;
+    /* Adicionando um leve padding-bottom para o tooltip não ficar colado */
+    padding-bottom: 35px;
 }
 
 /* Efeito de hover */
 .contact-item:hover {
     background: linear-gradient(to right, #e0b973, #f5d49c); /* Inverte o gradiente no hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Sombra mais proeminente no hover */
-    transform: translateY(-5px); /* Elevação maior */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px);
 }
 
 .contact-item p {
     margin: 0;
-    font-size: 1.15rem; /* Texto da informação */
-    color: #1e1b18; /* Cor escura para o texto sobre o gradiente claro */
-    line-height: 1.4; /* Espaçamento de linha para a informação */
+    font-size: 1.15rem;
+    color: #333333; /* Cor do texto da informação: Mais escura para legibilidade */
+    line-height: 1.4;
+    text-align: center; /* Centraliza o texto dentro do bloco */
+    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+    display: flex; /* Para centralizar o conteúdo real se tiver um span */
+    flex-direction: column; /* Para alinhar forte e texto em coluna */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
 }
 
 .contact-item strong {
-    font-size: 1.4em; /* Título da informação maior */
-    color: #1a140e; /* Cor mais escura para o título */
+    font-size: 1.4em;
+    color: #1a140e; /* Cor do título da informação: Bem escura para destaque */
     margin-bottom: 10px; /* Espaço entre o título e a informação */
-    white-space: nowrap; /* Evita que o rótulo quebre a linha */
+    white-space: nowrap;
     flex-shrink: 0;
-    font-family: 'Playfair Display', serif; /* Mantém a fonte Playfair para os títulos */
-    text-transform: uppercase; /* Deixa o título em maiúsculas */
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -208,12 +215,13 @@ main p {
 }
 
 
-/* Estilo específico para o item do Discord */
+/* --- Estilo específico para o item do Discord --- */
 .discord-item {
-    /* Mantém o gradiente original mais escuro para o Discord */
-    background: linear-gradient(145deg, #3a2e26, #2d2621);
-    border-left: 3px solid #7289da; /* Mantém a borda do Discord */
-    justify-content: space-around; /* Ajusta espaçamento vertical para o conteúdo */
+    background: linear-gradient(145deg, #3a2e26, #2d2621); /* Mantém o gradiente original mais escuro */
+    border: 1px solid #4a372a; /* Adiciona uma borda sutil para alinhar com o info-contato */
+    border-left: 3px solid #7289da; /* Mantém a borda colorida do Discord */
+    /* Remove padding-bottom extra se ele for o último item e não precisar de tooltip */
+    padding-bottom: 25px; /* Ajusta padding para o Discord */
 }
 
 .discord-item:hover {
@@ -235,8 +243,11 @@ main p {
     text-transform: uppercase;
     letter-spacing: 0.8px;
     border-radius: 30px;
-    padding: 15px 30px; /* Botão Discord ligeiramente maior */
+    padding: 15px 30px;
     font-size: 1.1em;
+    /* Ajustes para garantir que o botão não "voe" */
+    margin-top: auto; /* Empurra o botão para baixo se houver espaço */
+    display: inline-block; /* Garante que as margens funcionem corretamente */
 }
 
 .discord-button:hover {
@@ -298,11 +309,12 @@ footer {
 
     .contact-item {
         padding: 20px 25px;
+        min-height: 130px; /* Ajusta altura mínima para telas menores */
     }
 
     .contact-item strong {
         font-size: 1.3em;
-        margin-bottom: 8px; /* Reduz o espaçamento para telas menores */
+        margin-bottom: 8px;
     }
 
     .contact-item p {
