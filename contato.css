@@ -132,40 +132,52 @@ main p {
     line-height: 1.8;
 }
 
-/* Estilo para cada item de contato (email, telefone, endereço) */
+/* --- Reestilização dos itens de contato --- */
 .contact-item {
-    /* Gradiente aplicado aqui */
-    background: linear-gradient(to right, rgba(43, 35, 30, 0.9), rgba(43, 35, 30, 0.5));
+    /* Novo Gradiente com cores do tema */
+    background: linear-gradient(to right, #f5d49c, #e0b973); /* Começa mais claro e vai para mais escuro */
     padding: 20px 25px;
     border-radius: 10px;
     margin-bottom: 20px;
-    border-left: 3px solid #f5d49c;
+    /* Remover border-left se o gradiente já for o destaque */
+    border: none; /* Remove a borda lateral */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     display: flex;
-    justify-content: center; /* Mantido para centralizar o bloco */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda dentro do item */
     align-items: center;
-    transition: background 0.3s ease, box-shadow 0.3s ease; /* Transição para o hover */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Adiciona transform para hover */
+    cursor: pointer; /* Indica que é clicável/interagível */
 }
 
-/* Ajuste para alinhar o conteúdo interno à esquerda dentro do item, enquanto o item em si é centralizado */
+/* Efeito de hover */
+.contact-item:hover {
+    background: linear-gradient(to right, #e0b973, #f5d49c); /* Inverte o gradiente no hover */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px); /* Leve elevação */
+}
+
 .contact-item p {
     margin: 0;
     font-size: 1.15rem;
-    text-align: left; /* Alinha o texto do parágrafo à esquerda */
-    width: 100%; /* Garante que o parágrafo ocupe o espaço */
-    max-width: fit-content; /* Permite que o texto se ajuste naturalmente */
+    color: #1e1b18; /* Cor escura para o texto dentro do gradiente claro */
+    text-align: left;
+    display: flex; /* Para controlar o alinhamento de strong e do resto do texto */
+    align-items: center; /* Alinha verticalmente */
+    width: 100%; /* Ocupa a largura total para flex */
 }
 
 .contact-item strong {
-    color: #f5d49c;
-    margin-right: 8px;
+    color: #1a140e; /* Cor mais escura para o título da informação */
+    margin-right: 15px; /* Aumenta o espaçamento entre o título e o conteúdo */
     white-space: nowrap; /* Evita que o rótulo quebre a linha */
+    flex-shrink: 0; /* Impede que o strong encolha */
+    font-size: 1.2em; /* Deixa o título um pouco maior */
 }
 
-/* Efeito de escurecer ao passar o mouse com gradiente ajustado */
-.contact-item:hover {
-    background: linear-gradient(to right, rgba(30, 25, 22, 0.9), rgba(30, 25, 22, 0.6)); /* Gradiente mais escuro no hover */
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
+/* Restante do texto do parágrafo (o email, telefone, endereço) */
+.contact-item p span {
+    flex-grow: 1; /* Permite que o resto do texto ocupe o espaço restante */
+    white-space: normal; /* Permite que o conteúdo quebre a linha se necessário */
 }
 
 
@@ -175,19 +187,21 @@ main p {
     border-left: 3px solid #7289da;
     margin-top: 30px;
     flex-direction: column;
+    justify-content: center; /* Centraliza conteúdo para itens verticais */
+    padding: 25px; /* Garante que o padding esteja bom aqui também */
 }
 
-/* Efeito de escurecer ao passar o mouse para o item do Discord também */
 .discord-item:hover {
     background: linear-gradient(145deg, #2d2621, #1f1b18);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    transform: translateY(-3px);
 }
-
 
 .discord-item p {
     margin-bottom: 20px;
     color: #ccc;
     font-size: 1.15rem;
+    text-align: center; /* Mantém o texto centralizado neste item */
 }
 
 .discord-button {
@@ -255,17 +269,17 @@ footer {
     .contact-item {
         padding: 15px 20px;
         margin-bottom: 15px;
-        /* Remover justify-content: center; para telas menores para melhor alinhamento */
         justify-content: flex-start;
     }
 
     .contact-item p {
         font-size: 1rem;
-        text-align: left; /* Garante alinhamento à esquerda */
+        text-align: left;
     }
 
     .contact-item strong {
-        margin-right: 5px; /* Ajusta espaçamento para telas menores */
+        margin-right: 10px; /* Ajusta espaçamento para telas menores */
+        font-size: 1.1em;
     }
 
     .discord-item {
