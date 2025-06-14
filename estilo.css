@@ -1,0 +1,231 @@
+/* === Reset e base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #0f0c07, #1c1b19);
+  color: #f4f1ec;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #f5d49c;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e0c28d;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Alinha o logo verticalmente ao centro */
+  gap: 20px;
+}
+
+.logo img {
+  height: 90px; /* Reduza a altura da imagem do logo para caber na altura do header-content */
+}
+
+
+/* === Containers === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(to right, #1a140e, #2d1d13);
+  padding: 5px 0; /* Diminua ainda mais o padding superior e inferior */
+  border-bottom: 2px solid #a67c52;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Garante que os itens estejam centralizados verticalmente */
+  height: 100px; /* Defina uma altura fixa para o conteúdo do cabeçalho */
+}
+
+.logo {
+  display: flex;
+  align-items: end;
+  gap: 20px; /* Ajustado o espaçamento para compensar o aumento da logo */
+}
+
+.logo img {
+  height: 250px; /* Aumentado o tamanho da logo */
+}
+
+nav a {
+  margin-left: 20px;
+  color: #f4f1ec;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover {
+  color: #e0b973;
+}
+
+/* === Hero Section === */
+.hero {
+  position: relative;
+  background: url('wall2.jpg') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), #1a140e);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: #f0e3c4;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(to right, #cfa76e, #a87b4d);
+  color: #1e1b18;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(to right, #b68c5d, #8e6341);
+  transform: scale(1.05);
+}
+
+/* === Produtos === */
+.produtos {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 0;
+}
+
+.produto {
+  background: linear-gradient(145deg, #2b231e, #1d1916);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #4a372a;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-8px);
+}
+
+.exclusivity-badge {
+  background: linear-gradient(to right, #e6c78d, #cfa76e);
+  color: #1e1b18;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* === Newsletter === */
+.newsletter {
+  background: linear-gradient(to right, #2e251f, #1d1916);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  width: 280px;
+  margin-right: 10px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.newsletter button {
+  background: linear-gradient(to right, #d1a763, #b78b4b);
+  color: #1e1b18;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+  background: linear-gradient(to right, #b78b4b, #a1743e);
+}
+
+/* === Footer === */
+footer {
+  background: linear-gradient(to right, #1d1a16, #2c211b);
+  padding: 30px 0;
+  border-top: 1px solid #3d2a1f;
+  text-align: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .social-links a {
+  margin-left: 15px;
+  color: #e0b973;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+footer .social-links a:hover {
+  opacity: 0.8;
+}
