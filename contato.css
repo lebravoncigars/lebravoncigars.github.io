@@ -95,7 +95,7 @@ main p {
     color: #1e1b18;
     padding: 12px 28px;
     font-weight: bold;
-    border-radius: 30px;
+    border-radius: 30px; /* BORDAS ARREDONDADAS APLICADAS AQUI */
     border: none;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
@@ -145,6 +145,7 @@ main p {
     display: flex; /* Para alinhar o conteúdo */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; /* Centraliza verticalmente */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição para o hover */
 }
 
 .contact-item p {
@@ -155,6 +156,13 @@ main p {
     color: #f5d49c; /* Deixa o "Email:", "Telefone:" em dourado */
 }
 
+/* Efeito de escurecer ao passar o mouse */
+.contact-item:hover {
+    background-color: rgba(30, 25, 22, 0.8); /* Fundo um pouco mais escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra um pouco mais proeminente */
+}
+
+
 /* Estilo específico para o item do Discord */
 .discord-item {
     background: linear-gradient(145deg, #3a2e26, #2d2621); /* Fundo ligeiramente diferente para o Discord */
@@ -162,6 +170,13 @@ main p {
     margin-top: 25px; /* Mais espaço antes do item Discord */
     flex-direction: column; /* Para empilhar texto e botão */
 }
+
+/* Efeito de escurecer ao passar o mouse para o item do Discord também */
+.discord-item:hover {
+    background: linear-gradient(145deg, #2d2621, #1f1b18); /* Escurece o gradiente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
 
 .discord-item p {
     margin-bottom: 15px; /* Espaço entre o texto e o botão do Discord */
@@ -174,6 +189,7 @@ main p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), 0 0 15px rgba(114, 137, 218, 0.5); /* Sombra mais vibrante */
     text-transform: uppercase; /* Deixa o texto do botão em maiúsculas */
     letter-spacing: 0.8px;
+    border-radius: 30px; /* BORDAS ARREDONDADAS APLICADAS AQUI */
 }
 
 .discord-button:hover {
