@@ -132,77 +132,76 @@ main p {
     line-height: 1.8;
 }
 
-/* --- Reestilização e layout dos itens de contato (agora como blocos) --- */
+/* --- Reestilização inspirada na página inicial --- */
 .contact-items-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px; /* Espaçamento entre os blocos */
+    gap: 30px; /* Aumenta o gap para mais respiro, inspirado nos produtos */
     justify-content: center;
     align-items: stretch;
     margin-top: 30px;
 }
 
 .contact-item {
-    background: linear-gradient(to right, #f5d49c, #e0b973); /* Gradiente de ouro */
-    padding: 25px 30px;
-    border-radius: 12px;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    /* Inspirado nos produtos (.produto) e CTA (.cta-button) */
+    background: linear-gradient(145deg, #2b231e, #1d1916); /* Fundo similar ao produto */
+    padding: 30px; /* Aumenta o padding para ser mais espaçoso */
+    border-radius: 12px; /* Mantém o border-radius dos produtos */
+    border: 1px solid #4a372a; /* Borda similar aos produtos */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra similar aos produtos */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição de hover dos produtos */
     cursor: copy;
     text-align: center;
-    min-height: 150px;
+    min-height: 180px; /* Aumenta a altura mínima para mais presença */
     position: relative;
-    /* Adicionando um leve padding-bottom para o tooltip não ficar colado */
-    padding-bottom: 35px;
+    padding-bottom: 40px; /* Espaço extra para o tooltip */
 }
 
-/* Efeito de hover */
+/* Efeito de hover similar aos produtos */
 .contact-item:hover {
-    background: linear-gradient(to right, #e0b973, #f5d49c); /* Inverte o gradiente no hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-    transform: translateY(-5px);
+    transform: translateY(-8px); /* Elevação dos produtos */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Sombra mais intensa no hover */
 }
 
 .contact-item p {
     margin: 0;
     font-size: 1.15rem;
-    color: #333333; /* Cor do texto da informação: Mais escura para legibilidade */
-    line-height: 1.4;
-    text-align: center; /* Centraliza o texto dentro do bloco */
-    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
-    display: flex; /* Para centralizar o conteúdo real se tiver um span */
-    flex-direction: column; /* Para alinhar forte e texto em coluna */
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    color: #f4f1ec; /* Cor do texto: Volta para o branco para contraste com o fundo escuro */
+    line-height: 1.5; /* Espaçamento de linha confortável */
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Garante que o texto da info fique centralizado verticalmente */
 }
 
 .contact-item strong {
-    font-size: 1.4em;
-    color: #1a140e; /* Cor do título da informação: Bem escura para destaque */
-    margin-bottom: 10px; /* Espaço entre o título e a informação */
+    font-size: 1.5em; /* Título da informação maior */
+    color: #f5d49c; /* Cor do título: Dourado para destaque */
+    margin-bottom: 12px; /* Aumenta o espaçamento entre o título e a informação */
     white-space: nowrap;
     flex-shrink: 0;
     font-family: 'Playfair Display', serif;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px; /* Mais espaçamento entre letras no título */
 }
 
 /* Tooltip de "Copiado!" */
 .contact-item::after {
     content: "Copiado!";
     position: absolute;
-    bottom: 10px; /* Posição abaixo do item */
+    bottom: 15px; /* Posição ajustada abaixo do item */
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro para o tooltip */
     color: #f4f1ec;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
+    padding: 8px 15px; /* Padding maior para o tooltip */
+    border-radius: 6px;
+    font-size: 1em; /* Tamanho do texto do tooltip */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -217,21 +216,23 @@ main p {
 
 /* --- Estilo específico para o item do Discord --- */
 .discord-item {
-    background: linear-gradient(145deg, #3a2e26, #2d2621); /* Mantém o gradiente original mais escuro */
-    border: 1px solid #4a372a; /* Adiciona uma borda sutil para alinhar com o info-contato */
+    /* Mantém o gradiente original mais escuro para o Discord */
+    background: linear-gradient(145deg, #3a2e26, #2d2621);
+    border: 1px solid #4a372a;
     border-left: 3px solid #7289da; /* Mantém a borda colorida do Discord */
     /* Remove padding-bottom extra se ele for o último item e não precisar de tooltip */
-    padding-bottom: 25px; /* Ajusta padding para o Discord */
+    padding-bottom: 30px; /* Ajusta padding para o Discord */
+    justify-content: space-around; /* Distribui conteúdo verticalmente */
 }
 
 .discord-item:hover {
     background: linear-gradient(145deg, #2d2621, #1f1b18);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Sombra mais intensa no hover */
 }
 
 .discord-item p {
-    margin-bottom: 20px; /* Espaço entre o texto e o botão do Discord */
-    color: #ccc; /* Cor do texto para o Discord */
+    margin-bottom: 25px; /* Mais espaço entre o texto e o botão do Discord */
+    color: #ccc;
     font-size: 1.15rem;
     text-align: center;
 }
@@ -245,9 +246,8 @@ main p {
     border-radius: 30px;
     padding: 15px 30px;
     font-size: 1.1em;
-    /* Ajustes para garantir que o botão não "voe" */
-    margin-top: auto; /* Empurra o botão para baixo se houver espaço */
-    display: inline-block; /* Garante que as margens funcionem corretamente */
+    margin-top: auto; /* Empurra o botão para baixo */
+    display: inline-block;
 }
 
 .discord-button:hover {
@@ -308,21 +308,28 @@ footer {
     }
 
     .contact-item {
-        padding: 20px 25px;
-        min-height: 130px; /* Ajusta altura mínima para telas menores */
+        padding: 25px; /* Ajusta padding para telas menores */
+        min-height: 150px; /* Ajusta altura mínima para telas menores */
     }
 
     .contact-item strong {
-        font-size: 1.3em;
-        margin-bottom: 8px;
+        font-size: 1.2em; /* Reduz tamanho do título para telas menores */
+        margin-bottom: 10px;
     }
 
     .contact-item p {
         font-size: 1rem;
     }
 
+    .contact-item::after {
+        bottom: 10px; /* Ajusta posição do tooltip */
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
     .discord-item {
-        margin-top: 20px;
+        margin-top: 25px; /* Ajusta margem superior */
+        padding-bottom: 25px; /* Ajusta padding */
     }
 
     .discord-item p {
