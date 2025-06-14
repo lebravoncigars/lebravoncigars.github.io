@@ -1,166 +1,263 @@
-/* Cores originais do seu HTML/CSS anterior, ajustadas para o fundo escuro */
-body {
-    font-family: Arial, sans-serif;
+/* === Reset e base === */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2; /* Mantendo o fundo claro original */
-    color: #333; /* Texto escuro padrão */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #0f0c07, #1c1b19);
+    color: #f4f1ec;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.logo {
-    background-color: #333; /* Cor original */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #f5d49c;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e0c28d;
+}
+
+/* === Containers === */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Header === */
+header {
+    background: linear-gradient(to right, #1a140e, #2d1d13);
     padding: 20px 0;
+    border-bottom: 2px solid #a67c52;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     text-align: center;
-    border-bottom: 3px solid #ccc; /* Ajuste para contraste, ou mantenha a cor que você tinha */
 }
 
-.logo h1 {
-    margin: 0;
-    color: #fff; /* Cor original */
-    font-size: 2.5em;
-    letter-spacing: 2px;
+header h1 {
+    font-size: 2.5rem;
+    color: #f5d49c;
+    margin-bottom: 10px;
 }
 
 nav {
-    background-color: #555; /* Cor original */
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
 }
 
 nav a {
-    color: #fff; /* Cor original */
-    text-decoration: none;
-    padding: 10px 15px;
-    margin: 0 5px;
+    margin: 0 15px;
+    color: #f4f1ec;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 nav a:hover {
-    background-color: #777; /* Cor original */
+    color: #e0b973;
 }
 
-/* --- ESTILO DA SEÇÃO DE CONTATO AJUSTADO --- */
-.contact-page {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    min-height: calc(100vh - 180px); /* Garante altura mínima para o footer */
-    padding: 40px 20px;
-    box-sizing: border-box;
-    background-color: #f2f2f2; /* Fundo principal da página, mantendo-o claro */
+/* === Main Content === */
+main {
+    padding: 40px 0;
+    max-width: 800px; /* Mantém o max-width para o conteúdo principal */
+    margin: 0 auto;
+    text-align: center; /* Centraliza o texto do main */
 }
 
-.contact-info-container {
-    background-color: #ffffff; /* Fundo branco para a caixa de contato */
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-}
-
-.contact-info-container h2 {
-    color: #333; /* Título em preto */
-    font-size: 2.2em;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #ddd; /* Linha sutil abaixo do título */
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.intro-text {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-    color: #666; /* Texto de introdução em cinza mais suave */
-}
-
-.contact-item {
-    background-color: #f9f9f9; /* Fundo muito claro para cada item de contato */
-    padding: 20px;
+main h2 {
     margin-bottom: 20px;
-    border-radius: 6px;
-    border-left: 5px solid #007bff; /* Uma cor de destaque, como azul, ou outra que você prefira */
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra leve nos itens */
+    font-size: 2.8rem;
+    color: #f5d49c;
 }
 
-.contact-item h3 {
-    color: #0056b3; /* Cor do título do item (pode ser o mesmo azul de destaque) */
-    font-size: 1.5em;
-    margin-top: 0;
-    margin-bottom: 8px;
+main p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Removido .contato-form pois não teremos formulário */
+
+/* Estilo para as informações de contato */
+.info-contato {
+    background: linear-gradient(145deg, #2b231e, #1d1916);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #4a372a;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    text-align: left; /* Alinha o conteúdo interno à esquerda */
+    margin-bottom: 40px; /* Adiciona margem inferior para separar do footer se o main for menor */
+}
+
+.info-contato h3 {
+    font-size: 2rem;
+    margin-bottom: 25px; /* Aumentei a margem para um respiro maior */
+    color: #e0b973;
+    text-align: center; /* Centraliza o título "Nossos Contatos" */
+    border-bottom: 1px solid #4a372a; /* Adiciona uma linha sutil abaixo do título */
+    padding-bottom: 15px; /* Espaçamento da linha para o título */
+}
+
+.info-contato p {
+    font-size: 1.1rem; /* Um pouco maior para melhor legibilidade */
+    color: #f4f1ec; /* Cor do texto mais clara para destaque */
+    margin-bottom: 15px; /* Espaçamento entre os parágrafos */
+    text-align: center; /* Centraliza os parágrafos de contato */
+    line-height: 1.8; /* Mais espaçamento entre linhas */
+}
+
+/* Estilo para cada item de contato (email, telefone, endereço) */
+.contact-item {
+    background-color: rgba(43, 35, 30, 0.6); /* Um fundo sutil para cada item */
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 3px solid #f5d49c; /* Linha de destaque na cor dourada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex; /* Para alinhar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .contact-item p {
-    color: #333; /* Cor do texto do item */
-    font-size: 1.05em;
-    margin: 0;
+    margin: 0; /* Remove margem padrão do parágrafo dentro do item */
+}
+
+.contact-item strong {
+    color: #f5d49c; /* Deixa o "Email:", "Telefone:" em dourado */
+}
+
+/* Estilo específico para o item do Discord */
+.discord-item {
+    background: linear-gradient(145deg, #3a2e26, #2d2621); /* Fundo ligeiramente diferente para o Discord */
+    border-left: 3px solid #7289da; /* Cor do Discord */
+    margin-top: 25px; /* Mais espaço antes do item Discord */
+    flex-direction: column; /* Para empilhar texto e botão */
+}
+
+.discord-item p {
+    margin-bottom: 15px; /* Espaço entre o texto e o botão do Discord */
+    color: #ccc; /* Cor do texto no item discord */
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #cfa76e, #a87b4d);
+    color: #1e1b18;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase; /* Deixa o texto do botão em maiúsculas */
+    letter-spacing: 0.8px;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #b68c5d, #8e6341);
+    transform: scale(1.05);
 }
 
 .discord-button {
-    display: inline-block;
-    background-color: #7289da; /* Cor original do Discord */
+    background: linear-gradient(to right, #7289da, #5a66a1); /* Cor do Discord para o botão */
     color: #ffffff;
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), 0 0 15px rgba(114, 137, 218, 0.5); /* Sombra mais vibrante */
 }
 
 .discord-button:hover {
-    background-color: #677bc4;
-    transform: translateY(-2px);
+    background: linear-gradient(to right, #677bc4, #4a5482);
+    transform: scale(1.05);
 }
 
+
+/* === Footer === */
 footer {
-    background-color: #333; /* Cor original */
-    color: #fff; /* Cor original */
+    background: linear-gradient(to right, #1d1a16, #2c211b);
+    padding: 30px 0;
+    border-top: 1px solid #3d2a1f;
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    border-top: 3px solid #ccc; /* Ajuste para contraste */
+    color: #ccc;
+    font-size: 0.9rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsividade Básica */
+/* --- Responsividade --- */
 @media (max-width: 768px) {
-    .logo h1 {
-        font-size: 2em;
+    header h1 {
+        font-size: 2rem;
     }
 
     nav a {
-        padding: 8px 15px;
-        margin: 0 5px;
+        display: block;
+        margin: 10px auto;
+        font-size: 0.9rem;
     }
 
-    .contact-info-container {
-        padding: 30px;
+    main h2 {
+        font-size: 2.2rem;
     }
 
-    .contact-info-container h2 {
-        font-size: 2em;
+    main p {
+        font-size: 1rem;
+    }
+
+    .info-contato {
+        padding: 20px;
+    }
+
+    .info-contato h3 {
+        font-size: 1.8rem;
+    }
+
+    .info-contato p {
+        font-size: 1rem;
+    }
+
+    .contact-item {
+        padding: 10px 15px;
     }
 }
 
 @media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
     nav a {
-        display: block;
-        margin: 10px auto;
-        width: fit-content;
+        font-size: 0.85rem;
     }
 
-    .contact-info-container {
-        padding: 20px;
+    main h2 {
+        font-size: 1.8rem;
     }
 
-    .contact-item {
+    main p {
+        font-size: 0.95rem;
+    }
+
+    .info-contato {
         padding: 15px;
+    }
+
+    .info-contato h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
