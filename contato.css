@@ -70,7 +70,7 @@ nav a:hover {
 /* === Main Content === */
 main {
     padding: 40px 0;
-    max-width: 800px; /* Adjust max-width for contact form */
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
@@ -87,15 +87,13 @@ main p {
     margin-bottom: 30px;
 }
 
-/* Removido .contato-form pois não teremos formulário */
-
 .cta-button {
     display: inline-block;
     background: linear-gradient(to right, #cfa76e, #a87b4d);
     color: #1e1b18;
     padding: 12px 28px;
     font-weight: bold;
-    border-radius: 30px; /* BORDAS ARREDONDADAS APLICADAS AQUI */
+    border-radius: 30px;
     border: none;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
@@ -107,84 +105,89 @@ main p {
     transform: scale(1.05);
 }
 
-/* --- Reestilização do container de informações para contato --- */
 .info-contato {
     background: linear-gradient(145deg, #2b231e, #1d1916);
-    padding: 40px; /* Aumentado o padding geral */
-    border-radius: 15px; /* Levemente mais arredondado */
+    padding: 40px;
+    border-radius: 15px;
     border: 1px solid #4a372a;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra mais pronunciada */
-    text-align: center; /* Centraliza todo o conteúdo dentro do container */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
     margin-bottom: 40px;
 }
 
 .info-contato h3 {
-    font-size: 2.2rem; /* Título um pouco maior */
-    margin-bottom: 30px; /* Mais espaço abaixo do título */
+    font-size: 2.2rem;
+    margin-bottom: 30px;
     color: #e0b973;
     text-align: center;
     border-bottom: 1px solid #4a372a;
-    padding-bottom: 20px; /* Mais espaçamento da linha para o título */
+    padding-bottom: 20px;
 }
 
 .info-contato p {
-    font-size: 1.15rem; /* Texto levemente maior para melhor leitura */
+    font-size: 1.15rem;
     color: #ccc;
-    margin-bottom: 20px; /* Mais espaçamento entre os parágrafos gerais */
+    margin-bottom: 20px;
     text-align: center;
     line-height: 1.8;
 }
 
 /* Estilo para cada item de contato (email, telefone, endereço) */
 .contact-item {
-    background-color: rgba(43, 35, 30, 0.6);
-    padding: 20px 25px; /* Aumentado o padding dos itens */
-    border-radius: 10px; /* Levemente mais arredondado */
-    margin-bottom: 20px; /* Mais espaço entre os itens */
+    /* Gradiente aplicado aqui */
+    background: linear-gradient(to right, rgba(43, 35, 30, 0.9), rgba(43, 35, 30, 0.5));
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
     border-left: 3px solid #f5d49c;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); /* Sombra um pouco mais forte */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Mantido para centralizar o bloco */
     align-items: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Transição para o hover */
 }
 
+/* Ajuste para alinhar o conteúdo interno à esquerda dentro do item, enquanto o item em si é centralizado */
 .contact-item p {
-    margin: 0; /* Remove margem padrão do parágrafo dentro do item */
-    font-size: 1.15rem; /* Garante que o texto do item seja um pouco maior */
+    margin: 0;
+    font-size: 1.15rem;
+    text-align: left; /* Alinha o texto do parágrafo à esquerda */
+    width: 100%; /* Garante que o parágrafo ocupe o espaço */
+    max-width: fit-content; /* Permite que o texto se ajuste naturalmente */
 }
 
 .contact-item strong {
     color: #f5d49c;
-    margin-right: 8px; /* Espaço entre o label (ex: Email:) e o valor */
+    margin-right: 8px;
+    white-space: nowrap; /* Evita que o rótulo quebre a linha */
 }
 
-/* Efeito de escurecer ao passar o mouse */
+/* Efeito de escurecer ao passar o mouse com gradiente ajustado */
 .contact-item:hover {
-    background-color: rgba(30, 25, 22, 0.8);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6); /* Sombra mais proeminente no hover */
+    background: linear-gradient(to right, rgba(30, 25, 22, 0.9), rgba(30, 25, 22, 0.6)); /* Gradiente mais escuro no hover */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
 }
 
 
 /* Estilo específico para o item do Discord */
 .discord-item {
-    background: linear-gradient(145deg, #3a2e26, #2d2621);
+    background: linear-gradient(145deg, #3a2e26, #2d2621); /* Gradiente existente para o Discord */
     border-left: 3px solid #7289da;
-    margin-top: 30px; /* Mais espaço antes do item Discord */
+    margin-top: 30px;
     flex-direction: column;
 }
 
 /* Efeito de escurecer ao passar o mouse para o item do Discord também */
 .discord-item:hover {
     background: linear-gradient(145deg, #2d2621, #1f1b18);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Sombra mais forte no hover do Discord */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
 
 
 .discord-item p {
-    margin-bottom: 20px; /* Mais espaço entre o texto e o botão do Discord */
+    margin-bottom: 20px;
     color: #ccc;
-    font-size: 1.15rem; /* Garante que o texto do item Discord seja um pouco maior */
+    font-size: 1.15rem;
 }
 
 .discord-button {
@@ -234,7 +237,7 @@ footer {
     }
 
     .info-contato {
-        padding: 25px; /* Ajuste para telas menores */
+        padding: 25px;
         border-radius: 10px;
     }
 
@@ -252,10 +255,17 @@ footer {
     .contact-item {
         padding: 15px 20px;
         margin-bottom: 15px;
+        /* Remover justify-content: center; para telas menores para melhor alinhamento */
+        justify-content: flex-start;
     }
 
     .contact-item p {
         font-size: 1rem;
+        text-align: left; /* Garante alinhamento à esquerda */
+    }
+
+    .contact-item strong {
+        margin-right: 5px; /* Ajusta espaçamento para telas menores */
     }
 
     .discord-item {
