@@ -70,9 +70,9 @@ nav a:hover {
 /* === Main Content === */
 main {
     padding: 40px 0;
-    max-width: 800px; /* Mantém o max-width para o conteúdo principal */
+    max-width: 800px; /* Adjust max-width for contact form */
     margin: 0 auto;
-    text-align: center; /* Centraliza o texto do main */
+    text-align: center;
 }
 
 main h2 {
@@ -89,31 +89,48 @@ main p {
 
 /* Removido .contato-form pois não teremos formulário */
 
-/* Estilo para as informações de contato */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #cfa76e, #a87b4d);
+    color: #1e1b18;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #b68c5d, #8e6341);
+    transform: scale(1.05);
+}
+
 .info-contato {
     background: linear-gradient(145deg, #2b231e, #1d1916);
     padding: 30px;
     border-radius: 12px;
     border: 1px solid #4a372a;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    text-align: left; /* Alinha o conteúdo interno à esquerda */
-    margin-bottom: 40px; /* Adiciona margem inferior para separar do footer se o main for menor */
+    text-align: left;
+    margin-bottom: 40px; /* Adicionado para espaçamento */
 }
 
 .info-contato h3 {
     font-size: 2rem;
     margin-bottom: 25px; /* Aumentei a margem para um respiro maior */
     color: #e0b973;
-    text-align: center; /* Centraliza o título "Nossos Contatos" */
+    text-align: center;
     border-bottom: 1px solid #4a372a; /* Adiciona uma linha sutil abaixo do título */
     padding-bottom: 15px; /* Espaçamento da linha para o título */
 }
 
 .info-contato p {
     font-size: 1.1rem; /* Um pouco maior para melhor legibilidade */
-    color: #f4f1ec; /* Cor do texto mais clara para destaque */
+    color: #ccc; /* Mantém a cor original dos parágrafos de contato */
     margin-bottom: 15px; /* Espaçamento entre os parágrafos */
-    text-align: center; /* Centraliza os parágrafos de contato */
+    text-align: center;
     line-height: 1.8; /* Mais espaçamento entre linhas */
 }
 
@@ -151,30 +168,12 @@ main p {
     color: #ccc; /* Cor do texto no item discord */
 }
 
-.cta-button {
-    display: inline-block;
-    background: linear-gradient(to right, #cfa76e, #a87b4d);
-    color: #1e1b18;
-    padding: 12px 28px;
-    font-weight: bold;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    transition: background 0.3s ease, transform 0.3s ease;
-    text-transform: uppercase; /* Deixa o texto do botão em maiúsculas */
-    letter-spacing: 0.8px;
-}
-
-.cta-button:hover {
-    background: linear-gradient(to right, #b68c5d, #8e6341);
-    transform: scale(1.05);
-}
-
 .discord-button {
     background: linear-gradient(to right, #7289da, #5a66a1); /* Cor do Discord para o botão */
     color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), 0 0 15px rgba(114, 137, 218, 0.5); /* Sombra mais vibrante */
+    text-transform: uppercase; /* Deixa o texto do botão em maiúsculas */
+    letter-spacing: 0.8px;
 }
 
 .discord-button:hover {
