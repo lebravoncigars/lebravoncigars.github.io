@@ -107,89 +107,93 @@ main p {
     transform: scale(1.05);
 }
 
+/* --- Reestilização do container de informações para contato --- */
 .info-contato {
     background: linear-gradient(145deg, #2b231e, #1d1916);
-    padding: 30px;
-    border-radius: 12px;
+    padding: 40px; /* Aumentado o padding geral */
+    border-radius: 15px; /* Levemente mais arredondado */
     border: 1px solid #4a372a;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    text-align: left;
-    margin-bottom: 40px; /* Adicionado para espaçamento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra mais pronunciada */
+    text-align: center; /* Centraliza todo o conteúdo dentro do container */
+    margin-bottom: 40px;
 }
 
 .info-contato h3 {
-    font-size: 2rem;
-    margin-bottom: 25px; /* Aumentei a margem para um respiro maior */
+    font-size: 2.2rem; /* Título um pouco maior */
+    margin-bottom: 30px; /* Mais espaço abaixo do título */
     color: #e0b973;
     text-align: center;
-    border-bottom: 1px solid #4a372a; /* Adiciona uma linha sutil abaixo do título */
-    padding-bottom: 15px; /* Espaçamento da linha para o título */
+    border-bottom: 1px solid #4a372a;
+    padding-bottom: 20px; /* Mais espaçamento da linha para o título */
 }
 
 .info-contato p {
-    font-size: 1.1rem; /* Um pouco maior para melhor legibilidade */
-    color: #ccc; /* Mantém a cor original dos parágrafos de contato */
-    margin-bottom: 15px; /* Espaçamento entre os parágrafos */
+    font-size: 1.15rem; /* Texto levemente maior para melhor leitura */
+    color: #ccc;
+    margin-bottom: 20px; /* Mais espaçamento entre os parágrafos gerais */
     text-align: center;
-    line-height: 1.8; /* Mais espaçamento entre linhas */
+    line-height: 1.8;
 }
 
 /* Estilo para cada item de contato (email, telefone, endereço) */
 .contact-item {
-    background-color: rgba(43, 35, 30, 0.6); /* Um fundo sutil para cada item */
-    padding: 15px 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border-left: 3px solid #f5d49c; /* Linha de destaque na cor dourada */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    display: flex; /* Para alinhar o conteúdo */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição para o hover */
+    background-color: rgba(43, 35, 30, 0.6);
+    padding: 20px 25px; /* Aumentado o padding dos itens */
+    border-radius: 10px; /* Levemente mais arredondado */
+    margin-bottom: 20px; /* Mais espaço entre os itens */
+    border-left: 3px solid #f5d49c;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); /* Sombra um pouco mais forte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-item p {
     margin: 0; /* Remove margem padrão do parágrafo dentro do item */
+    font-size: 1.15rem; /* Garante que o texto do item seja um pouco maior */
 }
 
 .contact-item strong {
-    color: #f5d49c; /* Deixa o "Email:", "Telefone:" em dourado */
+    color: #f5d49c;
+    margin-right: 8px; /* Espaço entre o label (ex: Email:) e o valor */
 }
 
 /* Efeito de escurecer ao passar o mouse */
 .contact-item:hover {
-    background-color: rgba(30, 25, 22, 0.8); /* Fundo um pouco mais escuro */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra um pouco mais proeminente */
+    background-color: rgba(30, 25, 22, 0.8);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6); /* Sombra mais proeminente no hover */
 }
 
 
 /* Estilo específico para o item do Discord */
 .discord-item {
-    background: linear-gradient(145deg, #3a2e26, #2d2621); /* Fundo ligeiramente diferente para o Discord */
-    border-left: 3px solid #7289da; /* Cor do Discord */
-    margin-top: 25px; /* Mais espaço antes do item Discord */
-    flex-direction: column; /* Para empilhar texto e botão */
+    background: linear-gradient(145deg, #3a2e26, #2d2621);
+    border-left: 3px solid #7289da;
+    margin-top: 30px; /* Mais espaço antes do item Discord */
+    flex-direction: column;
 }
 
 /* Efeito de escurecer ao passar o mouse para o item do Discord também */
 .discord-item:hover {
-    background: linear-gradient(145deg, #2d2621, #1f1b18); /* Escurece o gradiente */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(145deg, #2d2621, #1f1b18);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Sombra mais forte no hover do Discord */
 }
 
 
 .discord-item p {
-    margin-bottom: 15px; /* Espaço entre o texto e o botão do Discord */
-    color: #ccc; /* Cor do texto no item discord */
+    margin-bottom: 20px; /* Mais espaço entre o texto e o botão do Discord */
+    color: #ccc;
+    font-size: 1.15rem; /* Garante que o texto do item Discord seja um pouco maior */
 }
 
 .discord-button {
-    background: linear-gradient(to right, #7289da, #5a66a1); /* Cor do Discord para o botão */
+    background: linear-gradient(to right, #7289da, #5a66a1);
     color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), 0 0 15px rgba(114, 137, 218, 0.5); /* Sombra mais vibrante */
-    text-transform: uppercase; /* Deixa o texto do botão em maiúsculas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), 0 0 15px rgba(114, 137, 218, 0.5);
+    text-transform: uppercase;
     letter-spacing: 0.8px;
-    border-radius: 30px; /* BORDAS ARREDONDADAS APLICADAS AQUI */
+    border-radius: 30px;
 }
 
 .discord-button:hover {
@@ -230,19 +234,36 @@ footer {
     }
 
     .info-contato {
-        padding: 20px;
+        padding: 25px; /* Ajuste para telas menores */
+        border-radius: 10px;
     }
 
     .info-contato h3 {
         font-size: 1.8rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     .info-contato p {
         font-size: 1rem;
+        margin-bottom: 15px;
     }
 
     .contact-item {
-        padding: 10px 15px;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+    }
+
+    .contact-item p {
+        font-size: 1rem;
+    }
+
+    .discord-item {
+        margin-top: 20px;
+    }
+
+    .discord-item p {
+        font-size: 1rem;
     }
 }
 
@@ -264,7 +285,7 @@ footer {
     }
 
     .info-contato {
-        padding: 15px;
+        padding: 20px;
     }
 
     .info-contato h3 {
